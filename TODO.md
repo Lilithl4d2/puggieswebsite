@@ -1,0 +1,230 @@
+- [ ] An admin panel to show information about players
+- [ ] Improve smurf detection
+- [ ] Fix readyup bug
+- [ ] Allow small pics in chat
+- [ ] IsClientTimingOut in the AFK detection in SM plugin, or solve AFKs some other way
+- [ ] Page with list of all players
+- [ ] If no ping info available, use the old info
+- [ ] Allow dead survivors to rq games without ban on last map on 2nd chapter
+- [ ] Fix exploiting the initial ready up timelimit
+- [ ] T2 and T1 configs for lower tier players
+- [ ] Check double html escaping of names
+- [ ] Default config for the case when zonemod is broken
+- [ ] Automatically parse anticheat logs and ban based on them
+
+- [x] Set player mmr
+- [x] Fix ordering of streams
+- [x] SEO optimization + cloudflare
+- [x] Add match info to server gamerules
+- [x] SM plugin: remove penalty for spectating
+- [x] Increase the 50 players threshold
+- [x] An admin panel to show anticheat logs
+- [x] Personal backend auth keys
+- [x] Option to delete ban from database
+- [x] If a player gets banned for not joining the game on custom map, his map confirmation resets
+- [x] Limit number of tickets in history
+- [x] Remove delay before joining queue
+- [x] Adapt to Cloudflare challenges
+- [x] Refresh streams logos sometimes
+- [x] Alerts on site that dont block scripts
+- [x] Save map history across reboots
+- [x] More chat messages about AFKing
+- [x] Test if anticheat logging works
+- [x] "Banned by" in the public banlist
+- [x] If player fails to ready up, his duo doesnt need to get blocked for 5 minutes
+- [x] Increase necessary players count on first readyup
+- [x] Check for max mmr difference when pairing teams
+- [x] Twitch auth https://github.com/markbates/goth
+- [x] Shorten the period of resetting rq ban length
+- [x] Offline + kick from queue timeout to 2min
+- [x] Split ranked and unranked players
+- [x] ReadyUp instantly pops during low online hours
+- [x] Fix duo game placement
+- [x] Improve pairings
+- [x] Force playerlist update on maplist refresh
+- [x] Streamers block
+- [x] Duo queue
+- [x] Custom maps
+- [x] Fix banning those who stuck loading in game in team 0
+- [x] Fix notifications of time left (AFK after readyup)
+- [x] Custom maps: prep database: ALTER TABLE players_list ADD COLUMN custom_maps BIGINT; UPDATE players_list SET custom_maps = 0;
+- [x] Filter out unrestarted servers
+- [x] Streamers block prep database: ALTER TABLE players_list ADD COLUMN twitch VARCHAR; UPDATE players_list SET twitch = '';
+- [x] Adjust ranking for new players, prep database: UPDATE players_list SET mmr_uncertainty = mmr_uncertainty * 1.67; UPDATE players_list SET mmr_uncertainty = 20.0 WHERE mmr_uncertainty > 20.0;
+- [x] Block unwanted games on the servers
+- [x] Advertising on the servers
+- [x] Setup database backups
+- [x] Instructions for admins
+- [x] Filter out bad ping info
+- [x] SM pluign: notify all player about suicide
+- [x] Frontend: button "Full announcement" to top
+- [x] Change abstractapi limits, + log site users
+- [x] Add admin command to update serverlist
+- [x] Set up proxy for gameservers
+- [x] Optimize server selection once again
+- [x] Cache a2s queries
+- [x] Make some of the servers 60T
+- [x] Suicide on !spec command
+- [x] Log games even if they ended early
+- [x] Adjust mmr penalties for leaving
+- [x] Searching in bans page
+- [x] Block abuse of pauses and !unready
+- [x] Improve map selection
+- [x] Visible timer in queue
+- [x] Fix mmr system issues caused by multiple accounts
+- [x] CSRF security
+- [x] Store update timestamp locally, not in cookies
+- [x] Support text copy on steambrowser on frontend
+- [x] Fix server selection
+- [x] Increase timeout on VPN info
+- [x] Exclude previously played campaigns from mappool
+- [x] Rules page
+- [x] FAQ page
+- [x] Edit mmr system, you need twice as higher scores to win max mmr + reconsider some mmr settings
+- [x] Replace nanotime-based random numbers by crypto-random number generator
+- [x] Replace lobbies with one single queue
+- [x] Optimize concurrent gameserver selection in Games
+- [x] Check if LastGameResult is correctry restoring on reboots
+- [x] Re-check if mmr uncertainty is correctly reducing
+- [x] Fix deadlocks, remove leftovers
+- [x] Adjust mmr system values
+- [x] Rethink server selection
+- [x] Log pings of players
+- [x] Fix automatic switching between lobbies too often
+- [x] Make sure players always connect to the oldest lobby
+- [x] Better readyup prints in SM plugin during 1st readyup
+- [x] Fix mmr ranges for lobby not accounting for 1-side array borders
+- [x] Fix counting in-game players as ready to join lobby
+- [x] Restarting mechanism
+- [x] Regularly increase mmr uncertainty value
+- [x] Log on database write failure
+- [x] Finish integration with io.asia
+- [x] Manage authorization expire
+- [x] Log public chat
+- [x] Log game chat
+- [x] Adapt to timer throttling in JS https://developer.chrome.com/blog/timer-throttling-in-chrome-88/
+- [x] Unique timestamp on chat messages
+- [x] Deal with those who isnt online but stays in lobby
+- [x] Block jointeam in SM plugin
+- [x] Log games
+- [x] Store initial player hours
+- [x] Search suspected smurfs
+- [x] Mmr color in response
+- [x] Add avatars
+- [x] Shorten the timeout on tickets
+- [x] Punish those who quits a full lobby
+- [x] When searching for ban history, look upon the bans of smurfs
+- [x] Dont allow to join server if banned from lobbies
+- [x] SM plugins: make l4d2center servers compatible with regular games
+- [x] End game if someone got banned midgame
+- [x] Check smurfs on important actions
+- [x] Smurf module: api endpoint to get known smurfs
+- [x] Smurf module: thread-safe smurf searching
+- [x] Test smurf found triggers
+- [x] Smurf found triggers
+- [x] Override VPN info
+- [x] Can't validate profile with VPN
+- [x] Validate, then show ban, then accept rules
+- [x] Trigger logging and smurf check on important events
+- [x] When validating profile, check for vpn and for smurfs
+- [x] Smurf traces + connect logging
+- [x] Check server behaviour if Steam down
+- [x] Remove mmr limits from Games, as useless
+- [x] VPN detection: make limits thread-safe
+- [x] Change server selection logic, dont rely on max ping
+- [x] Save VPN info to database
+- [x] Solve the banned IP problem on VPN checks, and test it
+- [x] Rate-limit VPN requests
+- [x] VPN checks
+- [x] Add / remove admins
+- [x] SM plugins: anticheat logs
+- [x] SM plugin: trigger config unloading if the server gets reserved
+- [x] SM plugin: dont kick on spec midgame, just prevent (or remove that limitation completely)
+- [x] SM plugin: natives and forwards
+- [x] SM plugin: Check when !rq command works, and edit its name
+- [x] !game id
+- [x] Dead survivors midround dont count as AFK
+- [x] Ragequitter doesnt gain points if he won
+- [x] Reduce uncertainty only if result changed from prev game
+- [x] Shift mmr accordingly, dont add static 1000 on registration
+- [x] Adjust time allowed for pinging
+- [x] Punish for ragequit in case on infected 1st half midround
+- [x] Check what happens if a player doesnt send ping info
+- [x] SM plugin: kick on c_thirdperson...smth
+- [x] SM plugin: kick on spec midgame
+- [x] Select config when game starts, not on lobby creation
+- [x] Rules page, with accept button
+- [x] Ban players from protesting bans
+- [x] Check what happens if a server gets reserved before restarting
+- [x] Crypto-secure ticket ID
+- [x] Limit size of ticket text
+- [x] Player report system
+- [x] Ban reports review system
+- [x] Shouldnt be able to ban admin
+- [x] Unbans
+- [x] On registration or authorizaton check if already banned
+- [x] Don't allow validation and accepting rules if banned
+- [x] Manual bans
+- [x] View bans publicly
+- [x] Ban system
+- [x] Ban those who failed to join game in time
+- [x] Ban those who ragequitted midgame
+- [x] Restore bans on restart
+- [x] Implement RWMutex locks
+- [x] Log out
+- [x] Don't touch mmr if scores are 0-0
+- [x] Optimize responses with sorting
+- [x] Update nickname button
+- [x] When selecting available servers, limit those which are outdated
+- [x] When calculating lobby mmr limits, include those players who are finishing a game soon
+- [x] Check when idle timer is reset
+- [x] Smurf&VPN detection module
+- [x] Chat system
+- [x] In /getgame send current game state as text
+- [x] Proceed with Game logic
+- [x] Make waiting for pings a settings instead of static 10s
+- [x] Allow to put any host in Allow-Origin
+- [x] Change Confogl configs list on settings, include config beautiful name
+- [x] Merge /getme and /getonlineplayers
+- [x] Games
+- [x] Re-check what apis are unavailable if player in game
+- [x] Sort players by the amount of time they spent in lobbies when autojoining a lobby
+- [x] Lobby timeouts
+- [x] Lobby filled and comes to readyup state
+- [x] ReadyUp timeouts
+- [x] Ping endpoint, for passing Cloudflare challenge
+- [x] Exclude idle players when calculating mmr ranges for lobby
+- [x] Add to settings.json ratelimit values, online expire, and idle timers
+- [x] IDLE players
+- [x] Ratelimit /createlobby, and check what should be ratelimites as well
+- [x] Text errors instead of codes
+- [x] Inactive players are online too
+- [x] Join any lobby
+- [x] Allow new lobby only if the player doesn't match any existing lobby
+- [x] Allow joining lobby only if mmr is applicable, and slots < 8
+- [x] Don't allow into a lobby if profile not validated and rules not accepted
+- [x] Sort lobbies in /getlobbies
+- [x] Lobby info to /getme
+- [x] Lobby update info to /status
+- [x] /getlobbies
+- [x] /leavelobby
+- [x] /joinlobby
+- [x] Optimize selecting from maps multiple times in a row
+- [x] Do not allow to create lobbies if player banned
+- [x] Do not allow to create lobbies if player not online
+- [x] Add timestamp into session key
+- [x] Accept rules command
+- [x] When requesting /status, tell if browser window is active
+- [x] Move http requests to separate package
+- [x] /getplayers
+- [x] Validate profile
+- [x] Manage online status of player
+- [x] Return more info in /getme
+- [x] Rewrite api
+- [x] Steam auth
+- [x] "Broken" mode
+- [x] Rethink regular pinging
+- [x] Set cookies after updating info
+- [x] Merge /status and /updateactivity
+- [x] Database
+- [x] Change mmr uncertainty to float
